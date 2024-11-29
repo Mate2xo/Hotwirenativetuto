@@ -1,0 +1,27 @@
+{
+  "settings": {},
+  "rules": [
+    {
+      "patterns": [".*"],
+      "properties": {
+        "context": "default",
+        "uri": "hotwire://fragment/web",
+        "pull_to_refresh_enabled": true
+      }
+    },
+    {
+      "patterns": ["/mon-compte$", "/projects$", "/mon-compte/financial_operations$", "/investissements"],
+      "properties": {
+        "presentation": "replace_root"
+      }
+    },
+    {
+      "patterns": ["/new$"],
+      "properties": {
+        "context": "modal",
+        "uri": "hotwire://fragment/web/modal/sheet",
+        "pull_to_refresh_enabled": false
+      }
+    }
+  ]
+}

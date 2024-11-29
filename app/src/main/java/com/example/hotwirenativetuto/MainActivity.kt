@@ -3,11 +3,14 @@ package com.example.hotwirenativetuto
 import android.os.Bundle
 import dev.hotwire.navigation.activities.HotwireActivity
 import dev.hotwire.navigation.navigator.NavigatorConfiguration
+import dev.hotwire.core.config.Hotwire
+import dev.hotwire.core.turbo.config.PathConfiguration
 
 class MainActivity : HotwireActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        configureApp()
     }
 
     override fun navigatorConfigurations() = listOf(
@@ -17,4 +20,14 @@ class MainActivity : HotwireActivity() {
             navigatorHostId = R.id.main_nav_host
         )
     )
+
+    private fun configureApp() {
+        // Set configuration options
+        Hotwire.loadPathConfiguration(
+            context = this,
+            location = PathConfiguration.Location(
+                assetFilePath = "json/configuration.json"
+            )
+        )
+    }
 }
