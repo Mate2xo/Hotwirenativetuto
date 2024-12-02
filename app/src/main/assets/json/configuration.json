@@ -16,7 +16,7 @@
       }
     },
     {
-      "patterns": ["/new$"],
+      "patterns": ["/new$", "/subscription_intentions/new"],
       "properties": {
         "context": "modal",
         "uri": "hotwire://fragment/web/modal/sheet",
