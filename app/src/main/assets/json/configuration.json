@@ -10,7 +10,7 @@
       }
     },
     {
-      "patterns": ["/mon-compte$", "/projects$", "/mon-compte/financial_operations$", "/investissements"],
+      "patterns": ["/$", "/mon-compte$", "/projects$", "/mon-compte/financial_operations$", "/investissements"],
       "properties": {
         "presentation": "replace_root"
       }
